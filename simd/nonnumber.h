@@ -13,7 +13,6 @@
 #define INFINITYf __builtin_inff()
 #else
 
-#include <bits/nan.h>
-#include <bits/inf.h>
+#include <math.h>
 
 #endif
