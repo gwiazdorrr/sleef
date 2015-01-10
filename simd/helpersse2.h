@@ -1,3 +1,7 @@
+#if defined(_MSC_VER) && _M_IX86_FP == 2
+#define __SSE2__
+#endif
+
 #ifndef __SSE2__
 #error Please specify -msse2.
 #endif
