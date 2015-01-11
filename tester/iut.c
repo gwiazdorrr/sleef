@@ -11,7 +11,7 @@
 #include <sys/types.h>
 #include <signal.h>
 
-#include "sleef.h"
+#include <sleef.h>
 
 int readln(int fd, char *buf, int cnt) {
   int i, rcnt = 0;

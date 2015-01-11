@@ -16,7 +16,20 @@
 #include <sys/types.h>
 #include <signal.h>
 
-#include "sleefsimd.h"
+#define ENABLE_DP
+#define ENABLE_SP
+
+#ifdef ENABLE_SSE2
+#include <sleefsimd_sse2.h>
+#elif defined(ENABLE_AVX)
+#include <sleefsimd_avx.h>
+#elif defined(ENABLE_AVX2)
+#include <sleefsimd_avx2.h>
+#elif defined(ENABLE_FMA4)
+#include <sleefsimd_fma4.h>
+#elif defined(ENABLE_NEON)
+#include <sleefsimd_neon.h>
+#endif
 
 static jmp_buf sigjmp;
 
