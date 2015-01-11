@@ -4,6 +4,11 @@ include_directories(${CMAKE_BINARY_DIR})
 list(LENGTH platforms len1)
 math(EXPR len2 "${len1} - 1")
 
+source_group("" FILES "iut.c")
+add_executable(iut "iut.c")
+target_link_libraries(iut sleef m)
+target_include_directories(iut PRIVATE "${sleef_SOURCE_DIR}/purec")
+
 foreach(val RANGE ${len2})
 	
 	list(GET platforms ${val} p)
@@ -16,7 +21,7 @@ foreach(val RANGE ${len2})
 	string(TOUPPER ${p} platform_upper)
 	set_target_properties(iut${p} PROPERTIES COMPILE_FLAGS "-DENABLE_${platform_upper} ${switch}")
 	
-	# link with sleef simd library and math
+	# link with architecture lib
 	target_link_libraries(iut${p} sleef${p} m)
 	
 endforeach()

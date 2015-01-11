@@ -16,6 +16,7 @@ endif()
 
 # NOTE: arm neon used these switches: -mfloat-abi=softfp -mfpu=neon -static
 
+add_subdirectory(purec)
 add_subdirectory(simd)
 
 set(BUILD_TESTS OFF CACHE BOOL "Requires Unix-like environment")
