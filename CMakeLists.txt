@@ -14,6 +14,8 @@ else()
 	set(platform_switches "-msse2" "-mavx" "-mavx2 -mfma" "-mavx -mfma4" )
 endif()
 
+# NOTE: arm neon used these switches: -mfloat-abi=softfp -mfpu=neon -static
+
 add_subdirectory(simd)
 
 set(BUILD_TESTS OFF CACHE BOOL "Requires Unix-like environment")

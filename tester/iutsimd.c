@@ -27,6 +27,7 @@
 #include <sleeffma4.h>
 #elif defined(ENABLE_NEON)
 #include <sleefneon.h>
+#undef ENABLE_DP
 #endif
 
 static jmp_buf sigjmp;
