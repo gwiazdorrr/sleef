@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.6)
-project (sleef LANGUAGES C)
+project (sleef)
 
 if(MSVC)
 	set(platforms sse2 avx avx2)
