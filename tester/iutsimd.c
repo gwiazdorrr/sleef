@@ -8,8 +8,6 @@
 #include <inttypes.h>
 
 #include <math.h>
-#include <bits/nan.h>
-#include <bits/inf.h>
 
 #include <unistd.h>
 #include <assert.h>
@@ -139,9 +137,9 @@ double xxsin(double d) {
   double s[VECTLENDP];
   int i;
   for(i=0;i<VECTLENDP;i++) {
-    s[i] = random()/(double)RAND_MAX*20000-10000;
+    s[i] = rand()/(double)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENDP-1);
+  int idx = rand() & (VECTLENDP-1);
   s[idx] = d;
 
   vdouble a = vloadu(s);
@@ -155,9 +153,9 @@ double xxcos(double d) {
   double s[VECTLENDP];
   int i;
   for(i=0;i<VECTLENDP;i++) {
-    s[i] = random()/(double)RAND_MAX*20000-10000;
+    s[i] = rand()/(double)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENDP-1);
+  int idx = rand() & (VECTLENDP-1);
   s[idx] = d;
 
   vdouble a = vloadu(s);
@@ -171,9 +169,9 @@ double xxtan(double d) {
   double s[VECTLENDP];
   int i;
   for(i=0;i<VECTLENDP;i++) {
-    s[i] = random()/(double)RAND_MAX*20000-10000;
+    s[i] = rand()/(double)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENDP-1);
+  int idx = rand() & (VECTLENDP-1);
   s[idx] = d;
 
   vdouble a = vloadu(s);
@@ -187,9 +185,9 @@ double xxasin(double d) {
   double s[VECTLENDP];
   int i;
   for(i=0;i<VECTLENDP;i++) {
-    s[i] = random()/(double)RAND_MAX*20000-10000;
+    s[i] = rand()/(double)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENDP-1);
+  int idx = rand() & (VECTLENDP-1);
   s[idx] = d;
 
   vdouble a = vloadu(s);
@@ -203,9 +201,9 @@ double xxacos(double d) {
   double s[VECTLENDP];
   int i;
   for(i=0;i<VECTLENDP;i++) {
-    s[i] = random()/(double)RAND_MAX*20000-10000;
+    s[i] = rand()/(double)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENDP-1);
+  int idx = rand() & (VECTLENDP-1);
   s[idx] = d;
 
   vdouble a = vloadu(s);
@@ -219,9 +217,9 @@ double xxatan(double d) {
   double s[VECTLENDP];
   int i;
   for(i=0;i<VECTLENDP;i++) {
-    s[i] = random()/(double)RAND_MAX*20000-10000;
+    s[i] = rand()/(double)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENDP-1);
+  int idx = rand() & (VECTLENDP-1);
   s[idx] = d;
 
   vdouble a = vloadu(s);
@@ -235,9 +233,9 @@ double xxlog(double d) {
   double s[VECTLENDP];
   int i;
   for(i=0;i<VECTLENDP;i++) {
-    s[i] = random()/(double)RAND_MAX*20000-10000;
+    s[i] = rand()/(double)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENDP-1);
+  int idx = rand() & (VECTLENDP-1);
   s[idx] = d;
 
   vdouble a = vloadu(s);
@@ -251,9 +249,9 @@ double xxexp(double d) {
   double s[VECTLENDP];
   int i;
   for(i=0;i<VECTLENDP;i++) {
-    s[i] = random()/(double)RAND_MAX*20000-10000;
+    s[i] = rand()/(double)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENDP-1);
+  int idx = rand() & (VECTLENDP-1);
   s[idx] = d;
 
   vdouble a = vloadu(s);
@@ -267,10 +265,10 @@ double2 xxsincos(double d) {
   double s[VECTLENDP], t[VECTLENDP];
   int i;
   for(i=0;i<VECTLENDP;i++) {
-    s[i] = random()/(double)RAND_MAX*20000-10000;
-    t[i] = random()/(double)RAND_MAX*20000-10000;
+    s[i] = rand()/(double)RAND_MAX*20000-10000;
+    t[i] = rand()/(double)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENDP-1);
+  int idx = rand() & (VECTLENDP-1);
 
   s[idx] = d;
 
@@ -292,9 +290,9 @@ double xxsinh(double d) {
   double s[VECTLENDP];
   int i;
   for(i=0;i<VECTLENDP;i++) {
-    s[i] = random()/(double)RAND_MAX*20000-10000;
+    s[i] = rand()/(double)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENDP-1);
+  int idx = rand() & (VECTLENDP-1);
   s[idx] = d;
 
   vdouble a = vloadu(s);
@@ -308,9 +306,9 @@ double xxcosh(double d) {
   double s[VECTLENDP];
   int i;
   for(i=0;i<VECTLENDP;i++) {
-    s[i] = random()/(double)RAND_MAX*20000-10000;
+    s[i] = rand()/(double)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENDP-1);
+  int idx = rand() & (VECTLENDP-1);
   s[idx] = d;
 
   vdouble a = vloadu(s);
@@ -324,9 +322,9 @@ double xxtanh(double d) {
   double s[VECTLENDP];
   int i;
   for(i=0;i<VECTLENDP;i++) {
-    s[i] = random()/(double)RAND_MAX*20000-10000;
+    s[i] = rand()/(double)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENDP-1);
+  int idx = rand() & (VECTLENDP-1);
   s[idx] = d;
 
   vdouble a = vloadu(s);
@@ -340,9 +338,9 @@ double xxasinh(double d) {
   double s[VECTLENDP];
   int i;
   for(i=0;i<VECTLENDP;i++) {
-    s[i] = random()/(double)RAND_MAX*20000-10000;
+    s[i] = rand()/(double)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENDP-1);
+  int idx = rand() & (VECTLENDP-1);
   s[idx] = d;
 
   vdouble a = vloadu(s);
@@ -356,9 +354,9 @@ double xxacosh(double d) {
   double s[VECTLENDP];
   int i;
   for(i=0;i<VECTLENDP;i++) {
-    s[i] = random()/(double)RAND_MAX*20000-10000;
+    s[i] = rand()/(double)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENDP-1);
+  int idx = rand() & (VECTLENDP-1);
   s[idx] = d;
 
   vdouble a = vloadu(s);
@@ -372,9 +370,9 @@ double xxatanh(double d) {
   double s[VECTLENDP];
   int i;
   for(i=0;i<VECTLENDP;i++) {
-    s[i] = random()/(double)RAND_MAX*20000-10000;
+    s[i] = rand()/(double)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENDP-1);
+  int idx = rand() & (VECTLENDP-1);
   s[idx] = d;
 
   vdouble a = vloadu(s);
@@ -388,9 +386,9 @@ double xxcbrt(double d) {
   double s[VECTLENDP];
   int i;
   for(i=0;i<VECTLENDP;i++) {
-    s[i] = random()/(double)RAND_MAX*20000-10000;
+    s[i] = rand()/(double)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENDP-1);
+  int idx = rand() & (VECTLENDP-1);
   s[idx] = d;
 
   vdouble a = vloadu(s);
@@ -404,9 +402,9 @@ double xxexp2(double d) {
   double s[VECTLENDP];
   int i;
   for(i=0;i<VECTLENDP;i++) {
-    s[i] = random()/(double)RAND_MAX*20000-10000;
+    s[i] = rand()/(double)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENDP-1);
+  int idx = rand() & (VECTLENDP-1);
   s[idx] = d;
 
   vdouble a = vloadu(s);
@@ -420,9 +418,9 @@ double xxexp10(double d) {
   double s[VECTLENDP];
   int i;
   for(i=0;i<VECTLENDP;i++) {
-    s[i] = random()/(double)RAND_MAX*20000-10000;
+    s[i] = rand()/(double)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENDP-1);
+  int idx = rand() & (VECTLENDP-1);
   s[idx] = d;
 
   vdouble a = vloadu(s);
@@ -436,9 +434,9 @@ double xxexpm1(double d) {
   double s[VECTLENDP];
   int i;
   for(i=0;i<VECTLENDP;i++) {
-    s[i] = random()/(double)RAND_MAX*20000-10000;
+    s[i] = rand()/(double)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENDP-1);
+  int idx = rand() & (VECTLENDP-1);
   s[idx] = d;
 
   vdouble a = vloadu(s);
@@ -452,9 +450,9 @@ double xxlog10(double d) {
   double s[VECTLENDP];
   int i;
   for(i=0;i<VECTLENDP;i++) {
-    s[i] = random()/(double)RAND_MAX*20000-10000;
+    s[i] = rand()/(double)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENDP-1);
+  int idx = rand() & (VECTLENDP-1);
   s[idx] = d;
 
   vdouble a = vloadu(s);
@@ -468,9 +466,9 @@ double xxlog1p(double d) {
   double s[VECTLENDP];
   int i;
   for(i=0;i<VECTLENDP;i++) {
-    s[i] = random()/(double)RAND_MAX*20000-10000;
+    s[i] = rand()/(double)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENDP-1);
+  int idx = rand() & (VECTLENDP-1);
   s[idx] = d;
 
   vdouble a = vloadu(s);
@@ -484,10 +482,10 @@ double xxpow(double x, double y) {
   double s[VECTLENDP], t[VECTLENDP];
   int i;
   for(i=0;i<VECTLENDP;i++) {
-    s[i] = random()/(double)RAND_MAX*20000-10000;
-    t[i] = random()/(double)RAND_MAX*20000-10000;
+    s[i] = rand()/(double)RAND_MAX*20000-10000;
+    t[i] = rand()/(double)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENDP-1);
+  int idx = rand() & (VECTLENDP-1);
 
   s[idx] = x;
   t[idx] = y;
@@ -511,10 +509,10 @@ double xxatan2(double y, double x) {
   double s[VECTLENDP], t[VECTLENDP];
   int i;
   for(i=0;i<VECTLENDP;i++) {
-    s[i] = random()/(double)RAND_MAX*20000-10000;
-    t[i] = random()/(double)RAND_MAX*20000-10000;
+    s[i] = rand()/(double)RAND_MAX*20000-10000;
+    t[i] = rand()/(double)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENDP-1);
+  int idx = rand() & (VECTLENDP-1);
 
   s[idx] = y;
   t[idx] = x;
@@ -534,11 +532,11 @@ double xxldexp(double x, int q) {
   int t[4];
   int i;
   for(i=0;i<VECTLENDP;i++) {
-    s[i] = random()/(double)RAND_MAX*20000-10000;
-    t[i] = (int)(random()/(double)RAND_MAX*20000-10000);
+    s[i] = rand()/(double)RAND_MAX*20000-10000;
+    t[i] = (int)(rand()/(double)RAND_MAX*20000-10000);
   }
 
-  int idx = random() & (VECTLENDP-1);
+  int idx = rand() & (VECTLENDP-1);
 
   s[idx] = x;
   t[idx] = q;
@@ -558,9 +556,9 @@ double xxsin_u1(double d) {
   double s[VECTLENDP];
   int i;
   for(i=0;i<VECTLENDP;i++) {
-    s[i] = random()/(double)RAND_MAX*20000-10000;
+    s[i] = rand()/(double)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENDP-1);
+  int idx = rand() & (VECTLENDP-1);
   s[idx] = d;
 
   vdouble a = vloadu(s);
@@ -574,9 +572,9 @@ double xxcos_u1(double d) {
   double s[VECTLENDP];
   int i;
   for(i=0;i<VECTLENDP;i++) {
-    s[i] = random()/(double)RAND_MAX*20000-10000;
+    s[i] = rand()/(double)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENDP-1);
+  int idx = rand() & (VECTLENDP-1);
   s[idx] = d;
 
   vdouble a = vloadu(s);
@@ -590,9 +588,9 @@ double xxtan_u1(double d) {
   double s[VECTLENDP];
   int i;
   for(i=0;i<VECTLENDP;i++) {
-    s[i] = random()/(double)RAND_MAX*20000-10000;
+    s[i] = rand()/(double)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENDP-1);
+  int idx = rand() & (VECTLENDP-1);
   s[idx] = d;
 
   vdouble a = vloadu(s);
@@ -606,9 +604,9 @@ double xxasin_u1(double d) {
   double s[VECTLENDP];
   int i;
   for(i=0;i<VECTLENDP;i++) {
-    s[i] = random()/(double)RAND_MAX*20000-10000;
+    s[i] = rand()/(double)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENDP-1);
+  int idx = rand() & (VECTLENDP-1);
   s[idx] = d;
 
   vdouble a = vloadu(s);
@@ -622,9 +620,9 @@ double xxacos_u1(double d) {
   double s[VECTLENDP];
   int i;
   for(i=0;i<VECTLENDP;i++) {
-    s[i] = random()/(double)RAND_MAX*20000-10000;
+    s[i] = rand()/(double)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENDP-1);
+  int idx = rand() & (VECTLENDP-1);
   s[idx] = d;
 
   vdouble a = vloadu(s);
@@ -638,9 +636,9 @@ double xxatan_u1(double d) {
   double s[VECTLENDP];
   int i;
   for(i=0;i<VECTLENDP;i++) {
-    s[i] = random()/(double)RAND_MAX*20000-10000;
+    s[i] = rand()/(double)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENDP-1);
+  int idx = rand() & (VECTLENDP-1);
   s[idx] = d;
 
   vdouble a = vloadu(s);
@@ -654,10 +652,10 @@ double xxatan2_u1(double y, double x) {
   double s[VECTLENDP], t[VECTLENDP];
   int i;
   for(i=0;i<VECTLENDP;i++) {
-    s[i] = random()/(double)RAND_MAX*20000-10000;
-    t[i] = random()/(double)RAND_MAX*20000-10000;
+    s[i] = rand()/(double)RAND_MAX*20000-10000;
+    t[i] = rand()/(double)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENDP-1);
+  int idx = rand() & (VECTLENDP-1);
 
   s[idx] = y;
   t[idx] = x;
@@ -676,9 +674,9 @@ double xxlog_u1(double d) {
   double s[VECTLENDP];
   int i;
   for(i=0;i<VECTLENDP;i++) {
-    s[i] = random()/(double)RAND_MAX*20000-10000;
+    s[i] = rand()/(double)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENDP-1);
+  int idx = rand() & (VECTLENDP-1);
   s[idx] = d;
 
   vdouble a = vloadu(s);
@@ -692,10 +690,10 @@ double2 xxsincos_u1(double d) {
   double s[VECTLENDP], t[VECTLENDP];
   int i;
   for(i=0;i<VECTLENDP;i++) {
-    s[i] = random()/(double)RAND_MAX*20000-10000;
-    t[i] = random()/(double)RAND_MAX*20000-10000;
+    s[i] = rand()/(double)RAND_MAX*20000-10000;
+    t[i] = rand()/(double)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENDP-1);
+  int idx = rand() & (VECTLENDP-1);
 
   s[idx] = d;
 
@@ -717,9 +715,9 @@ double xxcbrt_u1(double d) {
   double s[VECTLENDP];
   int i;
   for(i=0;i<VECTLENDP;i++) {
-    s[i] = random()/(double)RAND_MAX*20000-10000;
+    s[i] = rand()/(double)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENDP-1);
+  int idx = rand() & (VECTLENDP-1);
   s[idx] = d;
 
   vdouble a = vloadu(s);
@@ -743,9 +741,9 @@ float xxsinf(float d) {
   float s[VECTLENSP];
   int i;
   for(i=0;i<VECTLENSP;i++) {
-    s[i] = random()/(float)RAND_MAX*20000-10000;
+    s[i] = rand()/(float)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENSP-1);
+  int idx = rand() & (VECTLENSP-1);
   s[idx] = d;
 
   vfloat a = vloaduf(s);
@@ -759,9 +757,9 @@ float xxcosf(float d) {
   float s[VECTLENSP];
   int i;
   for(i=0;i<VECTLENSP;i++) {
-    s[i] = random()/(float)RAND_MAX*20000-10000;
+    s[i] = rand()/(float)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENSP-1);
+  int idx = rand() & (VECTLENSP-1);
   s[idx] = d;
 
   vfloat a = vloaduf(s);
@@ -775,9 +773,9 @@ float xxtanf(float d) {
   float s[VECTLENSP];
   int i;
   for(i=0;i<VECTLENSP;i++) {
-    s[i] = random()/(float)RAND_MAX*20000-10000;
+    s[i] = rand()/(float)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENSP-1);
+  int idx = rand() & (VECTLENSP-1);
   s[idx] = d;
 
   vfloat a = vloaduf(s);
@@ -791,9 +789,9 @@ float xxasinf(float d) {
   float s[VECTLENSP];
   int i;
   for(i=0;i<VECTLENSP;i++) {
-    s[i] = random()/(float)RAND_MAX*20000-10000;
+    s[i] = rand()/(float)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENSP-1);
+  int idx = rand() & (VECTLENSP-1);
   s[idx] = d;
 
   vfloat a = vloaduf(s);
@@ -807,9 +805,9 @@ float xxacosf(float d) {
   float s[VECTLENSP];
   int i;
   for(i=0;i<VECTLENSP;i++) {
-    s[i] = random()/(float)RAND_MAX*20000-10000;
+    s[i] = rand()/(float)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENSP-1);
+  int idx = rand() & (VECTLENSP-1);
   s[idx] = d;
 
   vfloat a = vloaduf(s);
@@ -823,9 +821,9 @@ float xxatanf(float d) {
   float s[VECTLENSP];
   int i;
   for(i=0;i<VECTLENSP;i++) {
-    s[i] = random()/(float)RAND_MAX*20000-10000;
+    s[i] = rand()/(float)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENSP-1);
+  int idx = rand() & (VECTLENSP-1);
   s[idx] = d;
 
   vfloat a = vloaduf(s);
@@ -839,10 +837,10 @@ float xxatan2f(float y, float x) {
   float s[VECTLENSP], t[VECTLENSP];
   int i;
   for(i=0;i<VECTLENSP;i++) {
-    s[i] = random()/(float)RAND_MAX*20000-10000;
-    t[i] = random()/(float)RAND_MAX*20000-10000;
+    s[i] = rand()/(float)RAND_MAX*20000-10000;
+    t[i] = rand()/(float)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENSP-1);
+  int idx = rand() & (VECTLENSP-1);
 
   s[idx] = y;
   t[idx] = x;
@@ -861,9 +859,9 @@ float xxlogf(float d) {
   float s[VECTLENSP];
   int i;
   for(i=0;i<VECTLENSP;i++) {
-    s[i] = random()/(float)RAND_MAX*20000-10000;
+    s[i] = rand()/(float)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENSP-1);
+  int idx = rand() & (VECTLENSP-1);
   s[idx] = d;
 
   vfloat a = vloaduf(s);
@@ -877,9 +875,9 @@ float xxexpf(float d) {
   float s[VECTLENSP];
   int i;
   for(i=0;i<VECTLENSP;i++) {
-    s[i] = random()/(float)RAND_MAX*20000-10000;
+    s[i] = rand()/(float)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENSP-1);
+  int idx = rand() & (VECTLENSP-1);
   s[idx] = d;
 
   vfloat a = vloaduf(s);
@@ -893,9 +891,9 @@ float xxsqrtf(float d) {
   float s[VECTLENSP];
   int i;
   for(i=0;i<VECTLENSP;i++) {
-    s[i] = random()/(float)RAND_MAX*20000-10000;
+    s[i] = rand()/(float)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENSP-1);
+  int idx = rand() & (VECTLENSP-1);
   s[idx] = d;
 
   vfloat a = vloaduf(s);
@@ -909,9 +907,9 @@ float xxcbrtf(float d) {
   float s[VECTLENSP];
   int i;
   for(i=0;i<VECTLENSP;i++) {
-    s[i] = random()/(float)RAND_MAX*20000-10000;
+    s[i] = rand()/(float)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENSP-1);
+  int idx = rand() & (VECTLENSP-1);
   s[idx] = d;
 
   vfloat a = vloaduf(s);
@@ -925,10 +923,10 @@ float2 xxsincosf(float d) {
   float s[VECTLENSP], t[VECTLENSP];
   int i;
   for(i=0;i<VECTLENSP;i++) {
-    s[i] = random()/(float)RAND_MAX*20000-10000;
-    t[i] = random()/(float)RAND_MAX*20000-10000;
+    s[i] = rand()/(float)RAND_MAX*20000-10000;
+    t[i] = rand()/(float)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENSP-1);
+  int idx = rand() & (VECTLENSP-1);
 
   s[idx] = d;
 
@@ -950,9 +948,9 @@ float xxsinhf(float d) {
   float s[VECTLENSP];
   int i;
   for(i=0;i<VECTLENSP;i++) {
-    s[i] = random()/(float)RAND_MAX*20000-10000;
+    s[i] = rand()/(float)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENSP-1);
+  int idx = rand() & (VECTLENSP-1);
   s[idx] = d;
 
   vfloat a = vloaduf(s);
@@ -966,9 +964,9 @@ float xxcoshf(float d) {
   float s[VECTLENSP];
   int i;
   for(i=0;i<VECTLENSP;i++) {
-    s[i] = random()/(float)RAND_MAX*20000-10000;
+    s[i] = rand()/(float)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENSP-1);
+  int idx = rand() & (VECTLENSP-1);
   s[idx] = d;
 
   vfloat a = vloaduf(s);
@@ -982,9 +980,9 @@ float xxtanhf(float d) {
   float s[VECTLENSP];
   int i;
   for(i=0;i<VECTLENSP;i++) {
-    s[i] = random()/(float)RAND_MAX*20000-10000;
+    s[i] = rand()/(float)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENSP-1);
+  int idx = rand() & (VECTLENSP-1);
   s[idx] = d;
 
   vfloat a = vloaduf(s);
@@ -998,9 +996,9 @@ float xxasinhf(float d) {
   float s[VECTLENSP];
   int i;
   for(i=0;i<VECTLENSP;i++) {
-    s[i] = random()/(float)RAND_MAX*20000-10000;
+    s[i] = rand()/(float)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENSP-1);
+  int idx = rand() & (VECTLENSP-1);
   s[idx] = d;
 
   vfloat a = vloaduf(s);
@@ -1014,9 +1012,9 @@ float xxacoshf(float d) {
   float s[VECTLENSP];
   int i;
   for(i=0;i<VECTLENSP;i++) {
-    s[i] = random()/(float)RAND_MAX*20000-10000;
+    s[i] = rand()/(float)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENSP-1);
+  int idx = rand() & (VECTLENSP-1);
   s[idx] = d;
 
   vfloat a = vloaduf(s);
@@ -1030,9 +1028,9 @@ float xxatanhf(float d) {
   float s[VECTLENSP];
   int i;
   for(i=0;i<VECTLENSP;i++) {
-    s[i] = random()/(float)RAND_MAX*20000-10000;
+    s[i] = rand()/(float)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENSP-1);
+  int idx = rand() & (VECTLENSP-1);
   s[idx] = d;
 
   vfloat a = vloaduf(s);
@@ -1046,9 +1044,9 @@ float xxexp2f(float d) {
   float s[VECTLENSP];
   int i;
   for(i=0;i<VECTLENSP;i++) {
-    s[i] = random()/(float)RAND_MAX*20000-10000;
+    s[i] = rand()/(float)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENSP-1);
+  int idx = rand() & (VECTLENSP-1);
   s[idx] = d;
 
   vfloat a = vloaduf(s);
@@ -1062,9 +1060,9 @@ float xxexp10f(float d) {
   float s[VECTLENSP];
   int i;
   for(i=0;i<VECTLENSP;i++) {
-    s[i] = random()/(float)RAND_MAX*20000-10000;
+    s[i] = rand()/(float)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENSP-1);
+  int idx = rand() & (VECTLENSP-1);
   s[idx] = d;
 
   vfloat a = vloaduf(s);
@@ -1078,9 +1076,9 @@ float xxexpm1f(float d) {
   float s[VECTLENSP];
   int i;
   for(i=0;i<VECTLENSP;i++) {
-    s[i] = random()/(float)RAND_MAX*20000-10000;
+    s[i] = rand()/(float)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENSP-1);
+  int idx = rand() & (VECTLENSP-1);
   s[idx] = d;
 
   vfloat a = vloaduf(s);
@@ -1094,9 +1092,9 @@ float xxlog10f(float d) {
   float s[VECTLENSP];
   int i;
   for(i=0;i<VECTLENSP;i++) {
-    s[i] = random()/(float)RAND_MAX*20000-10000;
+    s[i] = rand()/(float)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENSP-1);
+  int idx = rand() & (VECTLENSP-1);
   s[idx] = d;
 
   vfloat a = vloaduf(s);
@@ -1110,9 +1108,9 @@ float xxlog1pf(float d) {
   float s[VECTLENSP];
   int i;
   for(i=0;i<VECTLENSP;i++) {
-    s[i] = random()/(float)RAND_MAX*20000-10000;
+    s[i] = rand()/(float)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENSP-1);
+  int idx = rand() & (VECTLENSP-1);
   s[idx] = d;
 
   vfloat a = vloaduf(s);
@@ -1126,10 +1124,10 @@ float xxpowf(float x, float y) {
   float s[VECTLENSP], t[VECTLENSP];
   int i;
   for(i=0;i<VECTLENSP;i++) {
-    s[i] = random()/(float)RAND_MAX*20000-10000;
-    t[i] = random()/(float)RAND_MAX*20000-10000;
+    s[i] = rand()/(float)RAND_MAX*20000-10000;
+    t[i] = rand()/(float)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENSP-1);
+  int idx = rand() & (VECTLENSP-1);
 
   s[idx] = x;
   t[idx] = y;
@@ -1154,11 +1152,11 @@ float xxldexpf(float x, int q) {
   int t[VECTLENSP];
   int i;
   for(i=0;i<VECTLENSP;i++) {
-    s[i] = random()/(double)RAND_MAX*20000-10000;
-    t[i] = (int)(random()/(double)RAND_MAX*20000-10000);
+    s[i] = rand()/(double)RAND_MAX*20000-10000;
+    t[i] = (int)(rand()/(double)RAND_MAX*20000-10000);
   }
 
-  int idx = random() & (VECTLENSP-1);
+  int idx = rand() & (VECTLENSP-1);
 
   s[idx] = x;
   t[idx] = q;
@@ -1178,9 +1176,9 @@ float xxsinf_u1(float d) {
   float s[VECTLENSP];
   int i;
   for(i=0;i<VECTLENSP;i++) {
-    s[i] = random()/(float)RAND_MAX*20000-10000;
+    s[i] = rand()/(float)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENSP-1);
+  int idx = rand() & (VECTLENSP-1);
   s[idx] = d;
 
   vfloat a = vloaduf(s);
@@ -1194,9 +1192,9 @@ float xxcosf_u1(float d) {
   float s[VECTLENSP];
   int i;
   for(i=0;i<VECTLENSP;i++) {
-    s[i] = random()/(float)RAND_MAX*20000-10000;
+    s[i] = rand()/(float)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENSP-1);
+  int idx = rand() & (VECTLENSP-1);
   s[idx] = d;
 
   vfloat a = vloaduf(s);
@@ -1210,9 +1208,9 @@ float xxtanf_u1(float d) {
   float s[VECTLENSP];
   int i;
   for(i=0;i<VECTLENSP;i++) {
-    s[i] = random()/(float)RAND_MAX*20000-10000;
+    s[i] = rand()/(float)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENSP-1);
+  int idx = rand() & (VECTLENSP-1);
   s[idx] = d;
 
   vfloat a = vloaduf(s);
@@ -1226,9 +1224,9 @@ float xxasinf_u1(float d) {
   float s[VECTLENSP];
   int i;
   for(i=0;i<VECTLENSP;i++) {
-    s[i] = random()/(float)RAND_MAX*20000-10000;
+    s[i] = rand()/(float)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENSP-1);
+  int idx = rand() & (VECTLENSP-1);
   s[idx] = d;
 
   vfloat a = vloaduf(s);
@@ -1242,9 +1240,9 @@ float xxacosf_u1(float d) {
   float s[VECTLENSP];
   int i;
   for(i=0;i<VECTLENSP;i++) {
-    s[i] = random()/(float)RAND_MAX*20000-10000;
+    s[i] = rand()/(float)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENSP-1);
+  int idx = rand() & (VECTLENSP-1);
   s[idx] = d;
 
   vfloat a = vloaduf(s);
@@ -1258,9 +1256,9 @@ float xxatanf_u1(float d) {
   float s[VECTLENSP];
   int i;
   for(i=0;i<VECTLENSP;i++) {
-    s[i] = random()/(float)RAND_MAX*20000-10000;
+    s[i] = rand()/(float)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENSP-1);
+  int idx = rand() & (VECTLENSP-1);
   s[idx] = d;
 
   vfloat a = vloaduf(s);
@@ -1274,10 +1272,10 @@ float xxatan2f_u1(float y, float x) {
   float s[VECTLENSP], t[VECTLENSP];
   int i;
   for(i=0;i<VECTLENSP;i++) {
-    s[i] = random()/(float)RAND_MAX*20000-10000;
-    t[i] = random()/(float)RAND_MAX*20000-10000;
+    s[i] = rand()/(float)RAND_MAX*20000-10000;
+    t[i] = rand()/(float)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENSP-1);
+  int idx = rand() & (VECTLENSP-1);
 
   s[idx] = y;
   t[idx] = x;
@@ -1296,9 +1294,9 @@ float xxlogf_u1(float d) {
   float s[VECTLENSP];
   int i;
   for(i=0;i<VECTLENSP;i++) {
-    s[i] = random()/(float)RAND_MAX*20000-10000;
+    s[i] = rand()/(float)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENSP-1);
+  int idx = rand() & (VECTLENSP-1);
   s[idx] = d;
 
   vfloat a = vloaduf(s);
@@ -1312,9 +1310,9 @@ float xxcbrtf_u1(float d) {
   float s[VECTLENSP];
   int i;
   for(i=0;i<VECTLENSP;i++) {
-    s[i] = random()/(float)RAND_MAX*20000-10000;
+    s[i] = rand()/(float)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENSP-1);
+  int idx = rand() & (VECTLENSP-1);
   s[idx] = d;
 
   vfloat a = vloaduf(s);
@@ -1328,10 +1326,10 @@ float2 xxsincosf_u1(float d) {
   float s[VECTLENSP], t[VECTLENSP];
   int i;
   for(i=0;i<VECTLENSP;i++) {
-    s[i] = random()/(float)RAND_MAX*20000-10000;
-    t[i] = random()/(float)RAND_MAX*20000-10000;
+    s[i] = rand()/(float)RAND_MAX*20000-10000;
+    t[i] = rand()/(float)RAND_MAX*20000-10000;
   }
-  int idx = random() & (VECTLENSP-1);
+  int idx = rand() & (VECTLENSP-1);
 
   s[idx] = d;
 
@@ -1355,7 +1353,7 @@ float2 xxsincosf_u1(float d) {
 #define BUFSIZE 1024
 
 int main(int argc, char **argv) {
-  srandom(time(NULL));
+  srand(time(NULL));
 
   if (!detectFeature()) {
     fprintf(stderr, "\n\n***** This host does not support the necessary CPU features to execute this program *****\n\n\n");
