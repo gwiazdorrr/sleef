@@ -42,6 +42,10 @@ foreach(val RANGE ${len2})
 	
 	# define ENABLE_<P> and architecture switch
 	string(TOUPPER ${p} platform_upper)
+	
 	set_target_properties(sleef${p} PROPERTIES COMPILE_FLAGS "-DENABLE_${platform_upper} ${switch}")
+	set_target_properties(sleef${p} PROPERTIES PUBLIC_HEADER ${target_file})
+	
+	install(TARGETS sleef${p} ARCHIVE DESTINATION "lib" PUBLIC_HEADER DESTINATION "include")
 	
 endforeach()
