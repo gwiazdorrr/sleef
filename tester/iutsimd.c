@@ -18,15 +18,15 @@
 #define ENABLE_SP
 
 #ifdef ENABLE_SSE2
-#include <sleefsimd_sse2.h>
+#include <sleefsse2.h>
 #elif defined(ENABLE_AVX)
-#include <sleefsimd_avx.h>
+#include <sleefavx.h>
 #elif defined(ENABLE_AVX2)
-#include <sleefsimd_avx2.h>
+#include <sleefavx2.h>
 #elif defined(ENABLE_FMA4)
-#include <sleefsimd_fma4.h>
+#include <sleeffma4.h>
 #elif defined(ENABLE_NEON)
-#include <sleefsimd_neon.h>
+#include <sleefneon.h>
 #endif
 
 static jmp_buf sigjmp;
